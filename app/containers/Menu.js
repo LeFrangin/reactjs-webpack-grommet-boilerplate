@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import Toolbar from '../components/Toolbar'
+import Toolbar from '../components/MenuToolbar'
 import { changeLocale } from '../actions'
 import { push } from 'react-router-redux'
 

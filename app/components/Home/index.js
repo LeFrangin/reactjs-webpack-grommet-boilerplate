@@ -1,8 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { default as translations } from './i18n'
 import { Link } from 'react-router'
-import { default as Heading } from 'grommet/components/Heading'
-import { default as Button } from 'grommet/components/Button'
+import Heading from 'grommet/components/Heading'
+import Section from 'grommet/components/Section'
+import List from 'grommet/components/List'
+import ListItem from 'grommet/components/ListItem'
 
 import './style'
 
@@ -12,15 +14,24 @@ class Home extends Component {
     // }
 
     render() {
-        console.log("HOME");
         const { locale } = this.props;
 
         return (
-            <Heading tag="h1" uppercase={true}>
-                Sample Heading
-                <Button label="Label" onClick={console.log("Button")} />
-            </Heading>
-
+            <Section>
+                <Heading tag="h1" uppercase={true} align="center">
+                    {translations[locale].title}
+                </Heading>
+                <List>
+                    <ListItem justify="between">
+                        <span>ReactJS</span>
+                        <span className="secondary">15.3.2</span>
+                    </ListItem>
+                    <ListItem justify="between">
+                        <span>Redux</span>
+                        <span className="secondary">3.6.0</span>
+                    </ListItem>
+                </List>
+            </Section>
         );
     }
 }

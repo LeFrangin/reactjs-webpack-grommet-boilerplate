@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { increment, decrement } from '../actions'
-import Home from '../components/Home'
+import { increment, decrement } from '../../actions'
+import Home from '../../components/Home'
 
 const mapStateToProps = (state) => {
     return {

@@ -1,20 +1,14 @@
 import { connect } from 'react-redux'
-import { increment, decrement } from '../actions'
-import Home from '../components/Home'
+import Home from '../../components/Home'
 
 const mapStateToProps = (state) => {
     return {
+        locale: state.locale
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onIncrementClick: () => {
-            dispatch(increment())
-        },
-        onDecrementClick: () => {
-            dispatch(decrement())
-        }
     }
 };
 

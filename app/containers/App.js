@@ -4,6 +4,7 @@ import { browserHistory } from 'react-router'
 import { resetErrorMessage, changeLocale } from '../actions'
 import GrommetApp from 'grommet/components/App'
 import Notification from 'grommet/components/Notification'
+import Article from 'grommet/components/Article'
 import Button from 'grommet/components/Button'
 import Close from 'grommet/components/icons/base/Close'
 import Menu from './Menu'
@@ -43,16 +44,14 @@ class App extends Component {
     }
 
     render() {
-        const { children, changeLocale } = this.props;
+        const { children } = this.props;
         return (
             <GrommetApp inline={false}>
                 {this.renderMenu()}
-                <div className="error-message">
+                <Article>
                     {this.renderErrorMessage()}
-                </div>
-                <main id="main">
                     {children}
-                </main>
+                </Article>
             </GrommetApp>
         )
     }

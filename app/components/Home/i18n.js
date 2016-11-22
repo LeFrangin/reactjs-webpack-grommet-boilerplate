@@ -1,7 +1,9 @@
 const translations = {
     fr: {
+        title: "Boilerplate ReactJS"
     },
     en: {
+        title: "Boilerplate ReactJS"
     }
 };
 

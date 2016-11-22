@@ -3,7 +3,7 @@ import { routerReducer } from 'react-router-redux'
 import { combineReducers } from 'redux'
 import {reducer as formReducer} from 'redux-form';
 
-function locale(state = 'fr', action) {
+function locale(state = 'en', action) {
     const { type } = action;
 
     switch (type) {

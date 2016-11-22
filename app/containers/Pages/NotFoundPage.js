@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import NotFound from '../components/NotFound'
+import NotFound from '../../components/NotFound'
 import { push } from 'react-router-redux'
 
 const mapStateToProps = (state) => {
